@@ -1,9 +1,9 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
+title: PREDATORS
 image: /img/selective-focus-of-a-boxer-s-fist-3562117.jpg
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+heading: PREDATORS
+subheading: Fight club
 mainpitch:
   title: Why Kaldi
   description: >
