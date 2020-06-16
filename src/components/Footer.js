@@ -10,65 +10,30 @@ import vimeo from '../img/social/vimeo.svg';
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="footer has-background-black has-text-white-ter">
-        <div className="content has-text-centered">
+      <footer className="footer ">
+        <hr
+          style={{
+            border: 0,
+            height: 2,
+            backgroundImage:
+              'linear-gradient(to right, rgba(139, 0, 0, 0), rgba(139, 0, 0, 0.75), rgba(139, 0, 0, 0))',
+          }}
+        />
+        <div className="content has-text-centered ">
           <img
             src={logo}
-            alt="Kaldi"
+            alt="Predators"
             style={{ width: '14em', height: '10em' }}
           />
         </div>
-        <div className="content has-text-centered has-background-black has-text-white-ter">
-          <div className="container has-background-black has-text-white-ter">
-            <div style={{ maxWidth: '100vw' }} className="columns">
-              <div className="column is-4">
-                <section className="menu">
-                  <ul className="menu-list">
-                    <li>
-                      <Link to="/" className="navbar-item">
-                        Home
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/about">
-                        About
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/contact/examples">
-                        Form Examples
-                      </Link>
-                    </li>
-                    <li>
-                      <a
-                        className="navbar-item"
-                        href="/admin/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Admin
-                      </a>
-                    </li>
-                  </ul>
-                </section>
-              </div>
-              <div className="column is-4">
-                <section>
-                  <ul className="menu-list">
-                    <li>
-                      <Link className="navbar-item" to="/blog">
-                        Latest Stories
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/contact">
-                        Contact
-                      </Link>
-                    </li>
-                  </ul>
-                </section>
-              </div>
-              <div className="column is-4 social">
+
+        <div className="content has-text-centered ">
+          <div className="container ">
+            <div
+              style={{ maxWidth: '600vw', color: 'DarkRed' }}
+              className="columns"
+            >
+              <div className="column is-12 social">
                 <a title="facebook" href="https://facebook.com">
                   <img
                     src={facebook}
@@ -100,8 +65,57 @@ const Footer = class extends React.Component {
                 </a>
               </div>
             </div>
+
+            <div style={{ maxWidth: '600vw' }} className="columns">
+              <div className="column is-4">
+                <section className="menu">
+                  <ul className="menu-list">
+                    <li>
+                      <Link to="/" className="navbar-item ">
+                        Home
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="navbar-item" to="/about">
+                        About
+                      </Link>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+              <div className="column is-4">
+                <section>
+                  <ul className="menu-list">
+                    <li>
+                      <Link className="navbar-item" to="/blog">
+                        Latest Stories
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="navbar-item" to="/contact">
+                        Contact
+                      </Link>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+              <div className="column is-4">
+                <section>
+                  <ul className="menu-list">
+                    <li>Address line 1</li>
+                    <li>Address line 2</li>
+                    <li>Phone number</li>
+                  </ul>
+                </section>
+              </div>
+            </div>
           </div>
         </div>
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
       </footer>
     );
   }

@@ -1,6 +1,11 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import logo from '../img/logo.svg';
+import mark from '../img/mark.png';
+
+const styles = {
+  transition: 'all 1.5s ease-in',
+};
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -8,7 +13,14 @@ const Navbar = class extends React.Component {
     this.state = {
       active: false,
       navBarActiveClass: '',
+      opacity: 0,
     };
+  }
+
+  onHide() {
+    this.setState({
+      opacity: 1,
+    });
   }
 
   toggleHamburger = () => {
@@ -38,19 +50,51 @@ const Navbar = class extends React.Component {
         role="navigation"
         aria-label="main-navigation"
       >
-        <div className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Predators" style={{ width: '90px' }} />
+        <div
+          className="container"
+          style={{
+            ...styles,
+            opacity: this.state.opacity,
+          }}
+        >
+          <div className="navbar-brand ">
+            <Link to="/" className="navbar-item  " title="Logo">
+              <img
+                src={logo}
+                alt="Predators"
+                style={{ width: '50px', color: 'DarkRed' }}
+                onLoad={this.onHide.bind(this)}
+              />
               PREDATORS
             </Link>
+            <img
+              src={mark}
+              alt="Predators"
+              style={{
+                padding: '2px',
+                height: '45px',
+                width: '37px',
+                color: 'DarkRed',
+              }}
+              onLoad={this.onHide.bind(this)}
+            />
             {/* Hamburger menu */}
             <div
               className={`navbar-burger burger ${this.state.navBarActiveClass}`}
               data-target="navMenu"
               onClick={() => this.toggleHamburger()}
             >
+              <div
+                className="card deep-purple z-depth-2"
+                style={{
+                  ...styles,
+                  opacity: this.state.opacity,
+                  transform: 'scale(' + this.state.scale + ')',
+                }}
+              ></div>
+
               <span />
+
               <span />
               <span />
             </div>
@@ -59,7 +103,10 @@ const Navbar = class extends React.Component {
             id="navMenu"
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
-            <div className="navbar-end has-text-centered">
+            <div
+              className="navbar-end has-text-centered"
+              onLoad={this.onHide.bind(this)}
+            >
               <Link className="navbar-item" to="/about">
                 About
               </Link>
