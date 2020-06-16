@@ -4,6 +4,7 @@ title: PREDATORS
 image: /img/boxer-s-fist.jpg
 heading: PREDATORS
 subheading: Fight club
+anotherheading: more text
 mainpitch:
   title: Why Kaldi
   description: >
