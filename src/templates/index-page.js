@@ -36,14 +36,6 @@ export const IndexPageTemplate = ({
           flexDirection: 'column',
         }}
       >
-        {/* <div
-          style={{
-            width: '400px',
-            textShadow: '0 0 5px #ffffff, 0 0 5px #000000',
-          }}
-        >
-          <img src={} alt="Predators" />
-        </div> */}
         <h1
           className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
           style={{

@@ -2,24 +2,13 @@ import React from 'react';
 import { Link } from 'gatsby';
 import logo from '../img/logo.svg';
 
-const styles = {
-  transition: 'all 0.7s ease-in',
-};
-
 const Navbar = class extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       active: false,
       navBarActiveClass: '',
-      opacity: 0,
     };
-  }
-
-  onHide() {
-    this.setState({
-      opacity: 1,
-    });
   }
 
   toggleHamburger = () => {
@@ -49,20 +38,13 @@ const Navbar = class extends React.Component {
         role="navigation"
         aria-label="main-navigation"
       >
-        <div
-          className="container"
-          style={{
-            ...styles,
-            opacity: this.state.opacity,
-          }}
-        >
+        <div className="container">
           <div className="navbar-brand ">
             <Link to="/" className="navbar-item  " title="Logo">
               <img
                 src={logo}
                 alt="Predators"
                 style={{ height: '50px', width: '50px', color: 'DarkRed' }}
-                onLoad={this.onHide.bind(this)}
               />
               PREDATORS
             </Link>
@@ -72,14 +54,7 @@ const Navbar = class extends React.Component {
               data-target="navMenu"
               onClick={() => this.toggleHamburger()}
             >
-              <div
-                className="card deep-purple z-depth-2"
-                style={{
-                  ...styles,
-                  opacity: this.state.opacity,
-                  transform: 'scale(' + this.state.scale + ')',
-                }}
-              ></div>
+              <div className="card deep-purple z-depth-2"></div>
               <span />
               <span />
               <span />
@@ -89,10 +64,7 @@ const Navbar = class extends React.Component {
             id="navMenu"
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
-            <div
-              className="navbar-end has-text-centered"
-              onLoad={this.onHide.bind(this)}
-            >
+            <div className="navbar-end has-text-centered">
               <Link className="navbar-item" to="/about">
                 About
               </Link>
