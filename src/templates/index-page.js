@@ -29,30 +29,37 @@ export const IndexPageTemplate = ({
       <div
         style={{
           display: 'flex',
-          height: '150px',
+          height: '130px',
           lineHeight: '1',
           justifyContent: 'space-around',
           alignItems: 'left',
           flexDirection: 'column',
         }}
       >
+        {/* <div
+          style={{
+            width: '400px',
+            textShadow: '0 0 5px #ffffff, 0 0 5px #000000',
+          }}
+        >
+          <img src={} alt="Predators" />
+        </div> */}
         <h1
           className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
           style={{
-            boxShadow: 'rgb(255, 68, 0), rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(0, 0, 0)',
+            textShadow: '0 0 7px #ffffff, 0 0 5px #000000',
             color: 'white ',
-            lineHeight: '1',
+            lineHeight: '2',
             padding: '0.25em',
           }}
         >
           {title}
         </h1>
+
         <h3
           className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
           style={{
-            boxShadow: 'rgb(255, 68, 0), rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(0, 0, 0)',
+            textShadow: '0 0 5px #ffffff, 0 0 5px #000000',
             color: 'white',
             lineHeight: '1',
             padding: '0.15em',

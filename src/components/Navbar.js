@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import logo from '../img/logo.svg';
-import mark from '../img/mark.png';
 
 const styles = {
-  transition: 'all 1.5s ease-in',
+  transition: 'all 0.7s ease-in',
 };
 
 const Navbar = class extends React.Component {
@@ -62,22 +61,11 @@ const Navbar = class extends React.Component {
               <img
                 src={logo}
                 alt="Predators"
-                style={{ width: '50px', color: 'DarkRed' }}
+                style={{ height: '50px', width: '50px', color: 'DarkRed' }}
                 onLoad={this.onHide.bind(this)}
               />
               PREDATORS
             </Link>
-            <img
-              src={mark}
-              alt="Predators"
-              style={{
-                padding: '2px',
-                height: '45px',
-                width: '37px',
-                color: 'DarkRed',
-              }}
-              onLoad={this.onHide.bind(this)}
-            />
             {/* Hamburger menu */}
             <div
               className={`navbar-burger burger ${this.state.navBarActiveClass}`}
@@ -92,9 +80,7 @@ const Navbar = class extends React.Component {
                   transform: 'scale(' + this.state.scale + ')',
                 }}
               ></div>
-
               <span />
-
               <span />
               <span />
             </div>
