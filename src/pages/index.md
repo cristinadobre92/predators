@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: PREDATORS
-image: /img/selective-focus-of-a-boxer-s-fist-3562117.jpg
+image: /img/black-and-white-sport-fight-boxer-3797.jpg
 heading: PREDATORS
 subheading: Fight club
 mainpitch:
