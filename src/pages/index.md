@@ -7,7 +7,10 @@ subheading: Fight club
 mainpitch:
   title: Why Kaldi
   description: trying to make markdown
-description: Embedded Youtube clip.
+description: >-
+  Embedded Youtube clip.
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/rOGqnn2e7w0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 intro:
   blurbs:
     - image: /img/coffee.png
