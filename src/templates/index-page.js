@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import Content, { HTMLContent } from '../components/Content';
+import { Spring } from 'react-spring/renderprops';
 
 import Layout from '../components/Layout';
 import Features from '../components/Features';
@@ -45,13 +46,19 @@ export const IndexPageTemplate = ({
           <h1
             className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
             style={{
-              textShadow: '0 0 7px #ffffff, 0 0 5px #000000',
               color: 'white ',
               lineHeight: '2',
               padding: '0.25em',
+              textAlign: 'center',
             }}
           >
-            {title}
+            <Spring
+              from={{ textShadow: '0 0 1px #ffffff, 0 0 1px #000000' }}
+              to={{ textShadow: '0 0 8px #ffffff, 0 0 7px #000000' }}
+              config={{ delay: 1000, duration: 2000 }}
+            >
+              {(props) => <div style={props}>{title}</div>}
+            </Spring>
           </h1>
 
           <h3
@@ -66,20 +73,31 @@ export const IndexPageTemplate = ({
           >
             {subheading}
           </h3>
-        </div>
-      </div>
-
-      <section className="section section--gradient">
-        <div className="container">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="section">
-                <PageContent className="content" content={content} />
+          <section className="section section--gradient">
+            <div className="container">
+              <div className="columns">
+                <div className="column is-10 is-offset-1">
+                  <div className="section">
+                    <PageContent className="content" content={content} />
+                    <p
+                      className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
+                      style={{
+                        textShadow: '0 0 5px #ffffff, 0 0 5px #000000',
+                        color: 'white',
+                        lineHeight: '1',
+                        padding: '0.15em',
+                        textAlign: 'center',
+                      }}
+                    >
+                      {description}
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          </section>
         </div>
-      </section>
+      </div>
 
       <section className="section section--gradient">
         <div className="container">
@@ -100,7 +118,6 @@ export const IndexPageTemplate = ({
                       <h3 className="has-text-weight-semibold is-size-2">
                         {heading}
                       </h3>
-                      <p>{description}</p>
                     </div>
                   </div>
                   <Features gridItems={intro.blurbs} />
@@ -177,6 +194,7 @@ export default IndexPage;
 export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+      html
       frontmatter {
         title
         image {

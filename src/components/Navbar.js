@@ -44,7 +44,7 @@ const Navbar = class extends React.Component {
               <img
                 src={logo}
                 alt="Predators"
-                style={{ height: '50px', width: '50px', color: 'DarkRed' }}
+                style={{ height: '50px', width: '50px' }}
               />
               PREDATORS
             </Link>
