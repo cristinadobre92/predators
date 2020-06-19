@@ -66,16 +66,16 @@ export const IndexPageTemplate = ({
           >
             {subheading}
           </h3>
+          <br />
+          <br />
+          <div align="center">
+            <PageContent className="content" content={content} />
+          </div>
           <section className="section section--gradient">
             <div className="container">
               <div className="columns">
                 <div className="column is-10 is-offset-1">
                   <div className="section">
-                    <PageContent
-                      className="content"
-                      style={{ backgroundSize: '300% 300%' }}
-                      content={content}
-                    />
                     <p
                       className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
                       style={{

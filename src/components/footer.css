@@ -1,0 +1,27 @@
+.second {
+  -webkit-animation: change 2s ease-in-out infinite both;
+  animation: change 2s ease-in-out infinite both;
+}
+
+* ---------------------------------------------- */ @-webkit-keyframes change {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes change {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

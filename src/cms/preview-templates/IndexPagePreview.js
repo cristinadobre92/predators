@@ -16,6 +16,7 @@ const IndexPagePreview = ({ entry, getAsset, widgetFor }) => {
         description={data.description}
         intro={data.intro || { blurbs: [] }}
         mainpitch={data.mainpitch || {}}
+        sponsors={data.sponsors || []}
       />
     );
   } else {

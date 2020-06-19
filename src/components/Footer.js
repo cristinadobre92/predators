@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import './footer.css';
 
-import logo from '../img/logo.svg';
+import logo from '../img/logo.png';
+import closed from '../img/closed.png';
 import facebook from '../img/social/facebook.svg';
 import instagram from '../img/social/instagram.svg';
 import twitter from '../img/social/twitter.svg';
@@ -21,16 +23,33 @@ const Footer = class extends React.Component {
         />
         <div className="content has-text-centered ">
           <img
+            className="first"
             src={logo}
             alt="Predators"
-            style={{ width: '14em', height: '10em' }}
+            style={{
+              width: '9vw',
+              height: 'auto',
+              position: 'absolute',
+            }}
+          />
+          <img
+            className="second"
+            src={closed}
+            alt="Predators"
+            style={{
+              width: '9vw',
+              height: 'auto',
+              position: 'relative',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+            }}
           />
         </div>
 
         <div className="content has-text-centered ">
           <div className="container ">
             <div
-              style={{ maxWidth: '600vw', color: 'DarkRed' }}
+              style={{ maxWidth: '600vw', color: '#631000' }}
               className="columns"
             >
               <div className="column is-12 social">
