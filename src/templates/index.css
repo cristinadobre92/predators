@@ -1,0 +1,44 @@
+/* .glowing {
+    -webkit-animation: disp 1s infinite alternate;
+    animation: disp 1s infinite alternate;
+    color: white;
+    font-size: 60px;
+}
+@-webkit-keyframes disp {
+    0% {
+        text-shadow: 0 0 1px #ffffff, 0 0 1px #000000;
+    }
+    100% {
+        text-shadow: 0 0 8px #ffffff, 0 0 9px #000000;
+    }
+}
+@keyframes disp {
+    0% {
+        text-shadow: 0 0 1px #ffffff, 0 0 1px #000000;
+    }
+    100% {
+        text-shadow: 0 0 8px #ffffff, 0 0 9px #000000;
+    }
+} */
+.glowing {
+    background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 4vw;
+    font-family: "Source Sans Pro", sans-serif;
+    animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
+}
+@keyframes reveal {
+    80% {
+        letter-spacing: 8px;
+    }
+    100% {
+        background-size: 300% 300%;
+    }
+}
+@keyframes glow {
+    40% {
+        text-shadow: 0 0 8px #fff;
+    }
+}

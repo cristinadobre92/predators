@@ -1,0 +1,41 @@
+/* img {
+    -webkit-animation: mover 2s infinite alternate;
+    animation: mover 2s infinite alternate;
+}
+@-webkit-keyframes mover {
+    0% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+@keyframes mover {
+    0% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+} */
+
+.second {
+    -webkit-animation: disp 2s infinite alternate;
+    animation: disp 2s infinite alternate;
+}
+@-webkit-keyframes disp {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes disp {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

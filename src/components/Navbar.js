@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import logo from '../img/logo.svg';
+import './navbar.css';
+// import mark from '../img/mark.png';
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -43,9 +45,22 @@ const Navbar = class extends React.Component {
             <Link to="/" className="navbar-item  " title="Logo">
               <img
                 src={logo}
+                className="first"
                 alt="Predators"
                 style={{ height: '50px', width: '50px' }}
               />
+              {/* <img
+                src={mark}
+                alt="Predators"
+                className="second"
+                style={{
+                  height: '50px',
+                  width: '30px',
+                  position: 'absolute',
+                  top: '10px',
+                  left: '20px',
+                }}
+              /> */}
               PREDATORS
             </Link>
             {/* Hamburger menu */}

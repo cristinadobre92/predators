@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import Content, { HTMLContent } from '../components/Content';
-import { Spring } from 'react-spring/renderprops';
+import './index.css';
 
 import Layout from '../components/Layout';
 import Features from '../components/Features';
@@ -44,21 +44,14 @@ export const IndexPageTemplate = ({
           }}
         >
           <h1
-            className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
+            className="glowing"
             style={{
-              color: 'white ',
-              lineHeight: '2',
+              color: 'white',
               padding: '0.25em',
               textAlign: 'center',
             }}
           >
-            <Spring
-              from={{ textShadow: '0 0 1px #ffffff, 0 0 1px #000000' }}
-              to={{ textShadow: '0 0 8px #ffffff, 0 0 7px #000000' }}
-              config={{ delay: 1000, duration: 2000 }}
-            >
-              {(props) => <div style={props}>{title}</div>}
-            </Spring>
+            {title}
           </h1>
 
           <h3
@@ -78,7 +71,11 @@ export const IndexPageTemplate = ({
               <div className="columns">
                 <div className="column is-10 is-offset-1">
                   <div className="section">
-                    <PageContent className="content" content={content} />
+                    <PageContent
+                      className="content"
+                      style={{ backgroundSize: '300% 300%' }}
+                      content={content}
+                    />
                     <p
                       className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
                       style={{
